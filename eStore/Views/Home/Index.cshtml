@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container col-6">
+    <h1 class="display-4 text-center">Login</h1>  
+    <form asp-action="CheckLogin">
+        <div class="mb-3">
+            <label for="input-email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="input-email" name="email" aria-describedby="email-help" value="@ViewBag.Email">            
+        </div>
+        <div class="mb-3">
+            <label for="input-password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="input-password" name="password" value="@ViewBag.Password">
+        </div>        
+        <p class="text-danger">@ViewBag.Message</p>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
